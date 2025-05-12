@@ -9,10 +9,12 @@ body {
   border-radius: 20px;
 }
 
-.blog-image {
+.card-image {
+  margin: 24px;
 }
 
-.content {
+.card-content {
+  margin: 0px 24px 24px 24px;
 }
 
 .category {
@@ -62,4 +64,16 @@ body {
   letter-spacing: 0%;
 
   color: #111111;
+
+  margin: 0px 24px 24px 24px;
+
+  border: 1px solid black;
+}
+
+.author span {
+  border: 1px solid red;
+}
+
+.author img {
+  border: 1px solid red;
 }
