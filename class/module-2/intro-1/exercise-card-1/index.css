@@ -1,25 +1,32 @@
 body {
   background-color: #f4d04e;
-  font-family: "Figtree", sans-serif;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
 }
 
 .card-mobile {
   background-color: #ffffff;
   border: 1px solid #111111;
   border-radius: 20px;
-
-  margin: 24px auto;
+  box-shadow: 8px 8px 0px 0px black;
 
   width: 327px;
   height: 501px;
+  padding: 24px;
 }
 
-.card-image {
-  margin: 24px;
+.card-image img {
+  width: 100%;
+  height: 100%;
 }
 
 .card-content {
-  margin: 0px 24px 24px 24px;
+  margin-top: 24px;
+  margin-bottom: 24px;
 }
 
 .category {
@@ -50,14 +57,22 @@ body {
   color: #111111;
 }
 
+.publish-date p {
+  margin-bottom: 12px;
+}
+
 .title {
   font-family: Figtree;
   font-weight: 800;
-  font-size: 12px;
+  font-size: 20px;
   line-height: 150%;
   letter-spacing: 0%;
 
   color: #111111;
+}
+
+.title p {
+  margin: 0;
 }
 
 .description {
@@ -70,6 +85,10 @@ body {
   color: #6b6b6b;
 }
 
+.description p {
+  margin-top: 12px;
+}
+
 .author {
   font-family: Figtree;
   font-weight: 800;
@@ -77,8 +96,6 @@ body {
   line-height: 150%;
   letter-spacing: 0%;
   color: #111111;
-
-  margin: 0px 24px 24px 24px;
 
   display: flex;
   justify-content: start;

@@ -29,7 +29,7 @@ body {
 
 .product-category {
   text-transform: uppercase;
-  font-family: "Montserrat", sans-serif;
+  font-family: Montserrat;
   font-weight: 500;
   font-size: 12px;
   line-height: 100%;
