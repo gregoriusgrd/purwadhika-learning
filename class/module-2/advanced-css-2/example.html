@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .example {
+        /* width: 100px;
+            height: 50px; */
+        object-fit: cover;
+        /* content: url("Bitmap.png"); */
+        /* object-position: 10% 20%; */
+
+        @media screen and (min-width: 1024px) {
+          object-fit: none;
+          content: url("Blog.png");
+          width: 300px;
+          height: 450px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <img class="example" src="Bitmap.png" alt="gambar" />
+    </div>
+  </body>
+</html>

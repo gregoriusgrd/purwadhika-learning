@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flex</title>
+    <style>
+      .flex {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        /* pakai flex / grid bisa pakai gap (ga perlu margin) */
+        gap: 5px;
+
+        justify-content: center;
+
+        /* justify-items: center;
+            align-items: end; */
+      }
+
+      .flex div {
+        border: 1px solid black;
+        padding: 40px;
+        width: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+    </div>
+  </body>
+</html>
