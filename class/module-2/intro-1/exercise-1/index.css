@@ -7,6 +7,11 @@ body {
   background-color: #ffffff;
   border: 1px solid #111111;
   border-radius: 20px;
+
+  margin: 24px auto;
+
+  width: 327px;
+  height: 501px;
 }
 
 .card-image {
@@ -24,8 +29,15 @@ body {
   font-size: 12px;
   line-height: 150%;
   letter-spacing: 0%;
-
   color: #111111;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 73px;
+  height: 26px;
+  border-radius: 4px;
 }
 
 .publish-date {
@@ -41,7 +53,7 @@ body {
 .title {
   font-family: Figtree;
   font-weight: 800;
-  font-size: 20px;
+  font-size: 12px;
   line-height: 150%;
   letter-spacing: 0%;
 
@@ -54,6 +66,8 @@ body {
   font-size: 14px;
   line-height: 150%;
   letter-spacing: 0%;
+
+  color: #6b6b6b;
 }
 
 .author {
@@ -62,18 +76,15 @@ body {
   font-size: font-size/text-preset-3;
   line-height: 150%;
   letter-spacing: 0%;
-
   color: #111111;
 
   margin: 0px 24px 24px 24px;
 
-  border: 1px solid black;
-}
-
-.author span {
-  border: 1px solid red;
+  display: flex;
+  justify-content: start;
+  align-items: center;
 }
 
 .author img {
-  border: 1px solid red;
+  margin-right: 12px;
 }

@@ -4,8 +4,15 @@ body {
 
 .card-mobile {
   background-color: #ffffff;
+  margin: 28px auto;
+
+  width: 343px;
+  height: 611px;
+  border-radius: 10px;
+}
+
+.card-content {
   padding: 24px;
-  margin: 28px 16px;
 }
 
 .product-category {
@@ -18,12 +25,21 @@ body {
   color: #6c7289;
 }
 
+.product-category p {
+  margin: 0;
+}
+
 .product-name {
   font-family: Fraunces;
   font-weight: 700;
   font-size: 32px;
   line-height: 32px;
   letter-spacing: 0px;
+}
+
+.product-name p {
+  margin-top: 12px;
+  margin-bottom: 16px;
 }
 
 .product-description {
@@ -33,10 +49,14 @@ body {
   line-height: 23px;
   letter-spacing: 0px;
   color: #6c7289;
+
+  margin-bottom: 24px;
 }
 
 .price {
-  margin-bottom: 12px;
+  margin-bottom: 20px;
+
+  display: flex;
 }
 
 .price .price-discount {
@@ -46,6 +66,8 @@ body {
   line-height: 32px;
   letter-spacing: 0px;
   color: #3d8168;
+
+  margin-right: 20px;
 }
 
 .price .price-original {
@@ -56,6 +78,10 @@ body {
   letter-spacing: 0px;
   text-decoration: line-through;
   color: #6c7289;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 button {
