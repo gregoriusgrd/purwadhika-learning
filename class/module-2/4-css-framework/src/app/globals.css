@@ -1,10 +1,16 @@
 @import "tailwindcss";
+
+/* this not needed try second option */
 @import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
   --font-figtree: "Figtree", sans-serif;
+  --font-fraunces: "Fraunces", sans-serif;
+  --font-monserrat: "Montserrat", sans-serif;
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
@@ -27,3 +33,16 @@ body {
     font-family: var(--font-figtree);
   }
 }
+
+@layer base {
+  .font-fraunces {
+    font-family: var(--font-fraunces);
+  }
+}
+
+@layer base {
+  .font-monserrat {
+    font-family: var(--font-monserrat);
+  }
+}
+
