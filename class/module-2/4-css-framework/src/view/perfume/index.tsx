@@ -6,7 +6,7 @@ export default function PerfumeView() {
           <img
             className="h-[240px] w-full rounded object-cover lg:h-full lg:rounded-br-none lg:rounded-tr-none"
             src="/perfume/perfume-img.png"
-            alt="perfume image"
+            alt="Perfume image"
           />
         </div>
 
@@ -31,7 +31,7 @@ export default function PerfumeView() {
           </div>
 
           <button className="mt-5 flex h-[48px] w-full items-center justify-center gap-3 rounded-[8px] bg-[#3d8168] lg:mt-7">
-            <img src="/perfume/cart.png" alt="cart-icon" />
+            <img src="/perfume/cart.png" alt="Cart icon" />
             <span className="font-monserrat text-[14px] leading-[100%] font-bold tracking-normal text-white">
               Add to cart
             </span>
