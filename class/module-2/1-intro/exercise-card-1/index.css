@@ -12,6 +12,10 @@ body {
   background-color: #f4d04e;
 }
 
+/*
+flex justify-center items-center h-screen m-0 bg-yellow-500
+*/
+
 .card-mobile {
   width: 327px;
   height: 501px;
@@ -24,15 +28,27 @@ body {
   box-shadow: 8px 8px 0px 0px black;
 }
 
+/*
+w-[327px] h-[501px] p-[24px] border-[1px] border-[#111111] rounded-[20px] bg-white shadow-[8px_8px_0px_0px_black]
+*/
+
 .card-image img {
   width: 100%;
   height: 100%;
 }
 
+/*
+w-full h-full
+*/
+
 .card-content {
   margin-top: 24px;
   margin-bottom: 24px;
 }
+
+/*
+mt-[24px] mb-[24px]
+*/
 
 .category {
   /* Layout */
@@ -60,6 +76,10 @@ body {
   background-color: #f4d04e;
 }
 
+/*
+flex justify-center items-center w-[73px] h-[26px] rounded-[4px] font-figtree font-medium text-[12px] leading-[150%] tracking-[0%] text-[#111111] bg-[#f4d04e]
+*/
+
 .publish-date {
   font-family: Figtree;
   font-weight: 500;
@@ -68,6 +88,10 @@ body {
   letter-spacing: 0%;
   color: #111111;
 }
+
+/*
+font-figtree font-medium text-[12px] leading-[150%] tracking-[0%] text-[#111111]
+*/
 
 .publish-date p {
   margin-bottom: 12px;
@@ -82,6 +106,10 @@ body {
   color: #111111;
 }
 
+/*
+font-figtree font-extrabold text-[20px] leading-[150%] tracking-[0%] text-[#111111]
+*/
+
 .title p {
   margin: 0;
 }
@@ -94,6 +122,10 @@ body {
   letter-spacing: 0%;
   color: #6b6b6b;
 }
+
+/*
+font-figtree font-medium text-[14px] leading-[150%] tracking-[0%] text-[#111111]
+*/
 
 .description p {
   margin-top: 12px;
@@ -111,6 +143,10 @@ body {
   letter-spacing: 0%;
   color: #111111;
 }
+
+/*
+
+*/
 
 .author img {
   margin-right: 12px;
