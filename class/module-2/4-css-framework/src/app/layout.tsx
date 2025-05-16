@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 
 const figtree = Figtree({
   subsets: ["latin"],
-  variable: "--font-figtree", // ini penting
+  variable: "--font-figtree", // this
 });
 
 export const metadata: Metadata = {
