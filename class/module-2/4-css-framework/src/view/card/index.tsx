@@ -10,8 +10,8 @@ export default function CardView() {
           />
         </div>
 
-        <div className="mt-[24px] mb-[24px] flex lg:text-[14px]">
-          <div className="font-figtree flex h-[26px] w-[73px] items-center justify-center rounded-[4px] bg-[#f4d04e] text-[12px] leading-[150%] font-medium tracking-[0%] text-[#111111]">
+        <div className="mt-[24px] mb-[24px] lg:text-[14px]">
+          <div className="font-figtree flex h-[26px] w-[73px] items-center justify-center rounded-[4px] bg-[#f4d04e] text-[12px] leading-[150%] font-extrabold tracking-[0%] text-[#111111] lg:text-[14px]">
             <p>Learning</p>
           </div>
 
