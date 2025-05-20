@@ -14,7 +14,7 @@ export default function UseState() {
 
   return (
     <div className="p-4">
-      <h1 className="text-xl font-bold mb-2">To-Do List</h1>
+      <h1 className="text-xl font-bold">To-Do List</h1>
       <input
         className="border p-2 mr-2"
         type="text"
@@ -22,7 +22,7 @@ export default function UseState() {
         onChange={(e) => setInput(e.target.value)} // ubah input
         placeholder="Tambahkan tugas..."
       />
-      <button className="bg-blue-500 text-white px-4 py-2" onClick={addTodo}>
+      <button className="border text-white px-4 py-2" onClick={addTodo}>
         Tambah
       </button>
       <ul className="mt-4 list-disc list-inside">
