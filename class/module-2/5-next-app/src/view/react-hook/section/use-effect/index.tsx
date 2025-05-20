@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 
-export default function UseEffect() {
+export default function UseEffect({ nama }: { nama: string }) {
   const [imgUrl, setImgUrl] = useState<string>();
   const [imgUrlUE, setImgUrlUE] = useState<string>();
 
@@ -17,9 +17,6 @@ export default function UseEffect() {
     }
   }
 
-  // karena mau buat request pake async
-  // kalau tidak return apa apa pakai promise void
-
   // Menggunakan Use Effect
   async function fetchImgUrlUE(): Promise<void> {
     try {
@@ -34,19 +31,19 @@ export default function UseEffect() {
 
   useEffect(() => {
     fetchImgUrlUE();
-  }, [imgUrl]); // masuk jalan sekali saat page ke render saja
+  }, [imgUrl]);
 
   return (
     <div>
+      Hello {nama}
       <div>
         <p>Tanpa Use Effect</p>
         <button onClick={fetchImgUrl}>Load Image</button>
-        <img src={imgUrl} alt="Gambar anjing" />
+        <img src={imgUrl} alt="gambar-anjing" />
       </div>
-
       <div>
         <p>Menggunakan Use Effect</p>
-        <img src={imgUrlUE} alt="Gambar anjing" />
+        <img src={imgUrlUE} alt="gambar-anjing" />
       </div>
     </div>
   );

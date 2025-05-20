@@ -1,3 +1,4 @@
+"use client";
 import { createContext, useContext } from "react";
 
 type emailContext = {
@@ -5,11 +6,13 @@ type emailContext = {
 };
 
 const emailContextDefaultValues: emailContext = {
-    email: ""
-}
+  email: "",
+};
 
-const EmailContext = createContext<emailContext>(emailContextDefaultValues)
+export const EmailContext = createContext<emailContext>(
+  emailContextDefaultValues
+);
 
 export function useEmail() {
-    return useContext(EmailContext)
+  return useContext(EmailContext);
 }
