@@ -4,12 +4,15 @@ import Navbar from "@/components/navbar";
 
 export default function Hero() {
   return (
-    <main className="h-full overflow-hidden">
-      <nav>
+    <main className="relative h-screen bg-[url('/hero/hero-background.jpg')] bg-cover bg-center overflow-hidden">
+      
+      {/* Navbar on top */}
+      <nav className="w-full">
         <Navbar />
       </nav>
-      
-      <div className="flex flex-col justify-center items-center text-center px-4 py-0 gap-10">
+
+      {/* Hero Content Fullscreen */}
+      <div className="absolute inset-0 flex flex-col justify-center items-center text-center px-4 gap-10">
         <div className="flex flex-col gap-1">
           <h1 className="text-6xl font-bold">
             Inspiration for travel by real people
