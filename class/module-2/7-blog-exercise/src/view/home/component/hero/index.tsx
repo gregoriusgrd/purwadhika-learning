@@ -6,12 +6,10 @@ export default function Hero() {
   return (
     <main className="relative h-screen bg-[url('/hero/hero-background.jpg')] bg-cover bg-center overflow-hidden">
       
-      {/* Navbar on top */}
       <nav className="w-full">
         <Navbar />
       </nav>
 
-      {/* Hero Content Fullscreen */}
       <div className="absolute inset-0 flex flex-col justify-center items-center text-center px-4 gap-10">
         <div className="flex flex-col gap-1">
           <h1 className="text-6xl font-bold">
