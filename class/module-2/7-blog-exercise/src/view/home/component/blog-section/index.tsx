@@ -7,7 +7,7 @@ interface BlogSectionProps {
 
 export default function BlogSection({ blogs }: BlogSectionProps) {
   return (
-    <section>
+    <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-4">
       {blogs.map((blog) => (
         <BlogCard key={blog.sys.id} blog={blog} />
       ))}

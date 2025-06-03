@@ -11,10 +11,24 @@ export async function fetchBlogService() {
       params: {
         access_token: process.env.NEXT_PUBLIC_CONTENTFUL_API_KEY,
         content_type: "blog",
+        include: 1,
       },
     });
 
-    return data?.items;
+    const assetsMap: Record<string, any> = {};
+    data.includes?.Asset?.forEach((asset: any) => {
+      assetsMap[asset.sys.id] = asset;
+    });
+
+    const blogsWithImages = data.items.map((item: any) => {
+      const thumbnailRef = item.fields.thumbnail;
+      if (thumbnailRef?.sys?.id && assetsMap[thumbnailRef.sys.id]) {
+        item.fields.thumbnail = assetsMap[thumbnailRef.sys.id];
+      }
+      return item;
+    });
+
+    return blogsWithImages;
   } catch (err) {
     console.error("Failed to fetch", err);
     return [];
@@ -32,3 +46,4 @@ export async function fetchBlogServiceById(id: string) {
     console.log(err);
   }
 }
+

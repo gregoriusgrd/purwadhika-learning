@@ -10,6 +10,13 @@ export interface IBlog {
     authorName: string;
     publishDate: string;
     description: string;
+    thumbnail?: {
+      fields: {
+        file: {
+          url: string;
+        }
+      }
+    }
     // article: Document | undefined;
   };
 }
