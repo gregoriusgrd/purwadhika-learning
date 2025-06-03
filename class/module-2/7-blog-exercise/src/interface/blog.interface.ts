@@ -7,22 +7,9 @@ export interface IBlog {
   fields: {
     title: string;
     slug: string;
-    description: string;
-    thumbnail: {
-      fields: {
-        file: {
-          url: string;
-        };
-      };
-    };
-    authorImage: {
-      fields: {
-        file: {
-          url: string;
-        };
-      };
-    };
+    authorName: string;
     publishDate: string;
-    shares: number;
+    description: string;
+    // article: Document | undefined;
   };
 }
