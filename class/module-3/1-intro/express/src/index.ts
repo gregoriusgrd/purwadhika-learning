@@ -27,6 +27,14 @@ app.post("/api/auth", (req: Request, res: Response) => {
     })
 })
 
+app.post("/api/auth", (req: Request, res: Response) => {
+    const { name } = req.body
+    res.status(200).json({
+        status: "OK",
+        message: name,
+    })
+})
+
 app.put("/api/auth", (req: Request, res: Response) => {
     res.status(200).json({
         status: "OK",
