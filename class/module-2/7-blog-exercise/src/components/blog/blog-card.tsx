@@ -22,10 +22,10 @@ export default function BlogCard({ blog }: BlogCardProps) {
           className="w-full h-60 object-cover rounded mb-4"
         />
       )}
-      <h2 className="text-xl font-bold">{title}</h2>
-      <p>{authorName}</p>
-      <p>{publishDate}</p>
-      <p>{description}</p>
+      <h2 className="text-[42px] font-bold text-gray-900">{title}</h2>
+      <p className="text-2xl text-gray-900">{authorName}</p>
+      <p className="text-lg text-gray-600">{publishDate}</p>
+      <p className="text-gray-600 text-xl">{description}</p>
     </article>
   );
 }
