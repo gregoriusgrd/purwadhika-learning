@@ -89,3 +89,21 @@ export async function fetchBlogService() {
 }
 */
 
+// later
+/*
+    const blogsWithImages = data.items.map((item: any) => {
+      const thumbnailRef = item.fields.thumbnail;
+      if (thumbnailRef?.sys?.id && assetsMap[thumbnailRef.sys.id]) {
+        item.fields.thumbnail = assetsMap[thumbnailRef.sys.id];
+      }
+
+      const authorImageRef = item.fields.authorImage;
+      if (authorImageRef?.sys?.id && assetsMap[authorImageRef.sys.id]) {
+        item.fields.authorImage = assetsMap[authorImageRef.sys.id];
+      }
+
+      return item;
+    });
+
+    return blogsWithImages;
+*/
