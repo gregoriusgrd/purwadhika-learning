@@ -25,10 +25,17 @@ export async function fetchBlogService() {
       if (thumbnailRef?.sys?.id && assetsMap[thumbnailRef.sys.id]) {
         item.fields.thumbnail = assetsMap[thumbnailRef.sys.id];
       }
+
+      const authorImageRef = item.fields.authorImage;
+      if (authorImageRef?.sys?.id && assetsMap[authorImageRef.sys.id]) {
+        item.fields.authorImage = assetsMap[authorImageRef.sys.id];
+      }
+
       return item;
     });
 
     return blogsWithImages;
+
   } catch (err) {
     console.error("Failed to fetch", err);
     return [];
@@ -46,6 +53,7 @@ export async function fetchBlogServiceById(id: string) {
     console.log(err);
   }
 }
+
 
 
 // author image
@@ -107,3 +115,4 @@ export async function fetchBlogService() {
 
     return blogsWithImages;
 */
+

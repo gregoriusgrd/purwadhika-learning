@@ -14,9 +14,16 @@ export interface IBlog {
       fields: {
         file: {
           url: string;
-        }
-      }
-    }
+        };
+      };
+    };
+    authorImage?: {
+      fields: {
+        file: {
+          url: string;
+        };
+      };
+    };
     // article: Document | undefined;
   };
 }
