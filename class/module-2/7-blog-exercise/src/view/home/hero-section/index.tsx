@@ -2,9 +2,9 @@
 
 import Navbar from "@/components/navbar";
 
-export default function Hero() {
+export default function HeroSection() {
   return (
-    <main className="h-screen relative bg-[url('/hero/hero-background.jpg')] bg-cover bg-center overflow-hidden">
+    <section className="h-screen relative bg-[url('/home/hero-section/hero-background.jpg')] bg-cover bg-center overflow-hidden">
       
       <nav className="w-full">
         <Navbar />
@@ -22,6 +22,6 @@ export default function Hero() {
           Start planning your trip
         </button>
       </div>
-    </main>
+    </section>
   );
 }

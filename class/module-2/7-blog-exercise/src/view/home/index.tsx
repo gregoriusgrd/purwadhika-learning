@@ -1,10 +1,12 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import BlogSection from "./blog-section";
-import Hero from "./hero";
 import { IBlog } from "@/interface/blog.interface";
 import { fetchBlogService } from "@/service/blog.service";
+
+import BlogSection from "./blog-section";
+import HeroSection from  "./hero-section"
+import TravelSection from "./travel-section";
 
 export default function HomeView() {
   const [blogs, setBlogs] = useState<IBlog[]>([]);
@@ -21,8 +23,9 @@ export default function HomeView() {
 
   return (
     <main>
-      <Hero />
+      <HeroSection />
       <BlogSection blogs={blogs} />
+      <TravelSection />
     </main>
   );
 }

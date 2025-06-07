@@ -8,7 +8,7 @@ export default function Navbar() {
     <nav className="flex-shrink-0 flex justify-around items-center px-8 py-6 bg-[rgba(0,_0,_0,_0.5)]">
       <div className="h-10">
         <Image
-          src="/navbar/navbar-logo.png"
+          src="/home/navbar/navbar-logo.png"
           width={100}
           height={40}
           className="w-full h-auto"

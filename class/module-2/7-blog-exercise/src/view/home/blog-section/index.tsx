@@ -8,7 +8,7 @@ interface BlogSectionProps {
 
 export default function BlogSection({ blogs }: BlogSectionProps) {
   return (
-    <main className="bg-white p-6">
+    <section className="bg-white px-36 pt-6">
       <div className="socials">
           <Socials />
       </div>
@@ -18,6 +18,6 @@ export default function BlogSection({ blogs }: BlogSectionProps) {
           <BlogCard key={blog.sys.id} blog={blog} />
         ))}
       </section>
-    </main>
+    </section>
   );
 }
