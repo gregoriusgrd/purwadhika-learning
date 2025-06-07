@@ -1,8 +1,8 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import BlogSection from "./component/blog-section";
-import Hero from "./component/hero";
+import BlogSection from "./blog-section";
+import Hero from "./hero";
 import { IBlog } from "@/interface/blog.interface";
 import { fetchBlogService } from "@/service/blog.service";
 

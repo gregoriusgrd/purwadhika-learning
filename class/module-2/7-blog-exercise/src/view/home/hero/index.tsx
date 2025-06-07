@@ -4,7 +4,7 @@ import Navbar from "@/components/navbar";
 
 export default function Hero() {
   return (
-    <main className="relative h-100 bg-[url('/hero/hero-background.jpg')] bg-cover bg-center overflow-hidden">
+    <main className="h-screen relative bg-[url('/hero/hero-background.jpg')] bg-cover bg-center overflow-hidden">
       
       <nav className="w-full">
         <Navbar />
