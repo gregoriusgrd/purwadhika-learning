@@ -4,7 +4,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
-const user_route_1 = __importDefault(require("./route/user.route"));
+const expense_route_1 = __importDefault(require("./route/expense.route"));
 const PORT = 8080;
 const app = (0, express_1.default)();
 // MIDDLEWARE
@@ -20,7 +20,7 @@ app.use((req, res, next) => {
 // USER
 // BLOG
 // url: http://localhost:8080/users
-app.use("/users", user_route_1.default);
+app.use("/expenses", expense_route_1.default);
 // query parameter
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);

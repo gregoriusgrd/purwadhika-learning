@@ -1,34 +1,12 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = require("express");
+const user_controller_1 = require("../controller/user.controller");
 const router = (0, express_1.Router)();
 router.get("/", (req, res, next) => {
     console.log("Masuk ke middleware METHOD GET /users");
     next();
-}, (req, res) => {
-    const { page, access_token } = req.query;
-    res.status(200).json({
-        status: "OK",
-        data: [
-            {
-                id: 1,
-                name: "budi",
-            },
-            {
-                id: 2,
-                name: "sara",
-            },
-            {
-                id: 3,
-                name: "john",
-            },
-        ],
-        filter: {
-            page,
-            access_token,
-        },
-    });
-});
+}, user_controller_1.GetUsersController);
 // Route Parameter
 router.get("/:userId", (req, res) => {
     const { userId } = req.params;

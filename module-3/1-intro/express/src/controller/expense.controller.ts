@@ -7,17 +7,12 @@ export async function GetExpensesController(
   next: NextFunction
 ) {
   try {
-    const {filter} = req.query
-
-    const data = GetExpensesService({filter: String(filter)})
-
+    const expenses = GetExpensesService();
     res.status(200).json({
       status: "OK",
-      data: {
-        message: "success",
-      },
+      data: expenses,
     });
   } catch (err) {
-    next(err);
+    next(err); 
   }
 }

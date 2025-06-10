@@ -1,3 +1,20 @@
 {
-    "expenses": []
+    "expenses": [
+        {
+            "id": 1,
+            "title": "Gofood",
+            "nominal": 50000,
+            "type": "expense",
+            "category": "food",
+            "date": "2025-06-01"
+        },
+        {
+            "id": 2,
+            "title": "Gaji",
+            "nominal": 5000000,
+            "type": "income",
+            "category": "salary",
+            "date": "2025-06-03"
+        }
+    ]
 }

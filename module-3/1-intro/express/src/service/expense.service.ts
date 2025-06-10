@@ -1,10 +1,10 @@
-export function GetExpensesService({ filter }: { filter: string }) {
-  const data = [
-    {
-      id: 1,
-      title: "Gofood",
-    },
-  ];
+import fs from "fs";
+import { Expense } from "../interface/expense.interface";
 
-  return data;
+export function GetExpensesService(): Expense[] {
+  const data = fs.readFileSync("src/db.json", "utf-8");
+
+  const parsedData = JSON.parse(data);
+
+  return parsedData.expenses;
 }

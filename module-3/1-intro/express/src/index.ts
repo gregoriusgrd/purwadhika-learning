@@ -1,5 +1,6 @@
 import express, { Request, Response, Application, NextFunction } from "express";
 import userRoute from "./route/user.route";
+import expenseRoute from "./route/expense.route"
 
 const PORT = 8080;
 
@@ -20,10 +21,7 @@ app.use((req: Request, res: Response, next: NextFunction) => {
 // url: http://localhost:8080/api
 // method: GET
 
-// USER
-// BLOG
-// url: http://localhost:8080/users
-app.use("/users", userRoute);
+app.use("/expenses", expenseRoute);
 
 // query parameter
 
