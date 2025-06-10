@@ -1,4 +1,6 @@
 import { Router, Request, Response, NextFunction } from "express";
+import { GetUsersController } from "../controller/user.controller";
+
 const router = Router();
 
 router.get(
@@ -7,31 +9,7 @@ router.get(
     console.log("Masuk ke middleware METHOD GET /users");
     next();
   },
-  (req: Request, res: Response) => {
-    const { page, access_token } = req.query;
-
-    res.status(200).json({
-      status: "OK",
-      data: [
-        {
-          id: 1,
-          name: "budi",
-        },
-        {
-          id: 2,
-          name: "sara",
-        },
-        {
-          id: 3,
-          name: "john",
-        },
-      ],
-      filter: {
-        page,
-        access_token,
-      },
-    });
-  }
+  GetUsersController
 );
 
 // Route Parameter
