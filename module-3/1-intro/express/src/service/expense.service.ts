@@ -1,14 +1,14 @@
 import fs from "fs";
-import { Expense } from "../interface/expense.interface";
+import { IExpense } from "../interface/expense.interface";
 
-export function GetExpensesService(): Expense[] {
+export function GetExpensesService(): IExpense[] {
   const data = fs.readFileSync("src/db.json", "utf-8");
   const parsedData = JSON.parse(data);
 
   return parsedData.expenses;
 }
 
-export function AddExpenseService(newExpense: Expense): Expense {
+export function AddExpenseService(newExpense: IExpense): IExpense {
   const data = fs.readFileSync("src/db.json", "utf-8");
   const parsedData = JSON.parse(data);
 

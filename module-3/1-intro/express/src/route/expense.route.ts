@@ -1,9 +1,10 @@
 import { Router } from "express";
-import { AddExpenseController, GetExpensesController } from "../controller/expense.controller";
+import { AddExpenseController, GetExpenseDetailsController, GetExpensesController } from "../controller/expense.controller";
 
 const router = Router();
 
 router.get("/", GetExpensesController);
+router.get("/:id", GetExpenseDetailsController)
 router.post("/", AddExpenseController)
 
 export default router;

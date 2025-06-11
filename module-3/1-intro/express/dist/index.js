@@ -17,9 +17,6 @@ app.use((req, res, next) => {
 // REQUEST
 // url: http://localhost:8080/api
 // method: GET
-// USER
-// BLOG
-// url: http://localhost:8080/users
 app.use("/expenses", expense_route_1.default);
 // query parameter
 app.listen(PORT, () => {
