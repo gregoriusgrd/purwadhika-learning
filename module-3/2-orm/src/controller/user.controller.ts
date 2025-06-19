@@ -28,7 +28,7 @@ const userController = {
         data: result,
       });
     } catch (err) {
-      next(err);
+      next(err); // kalau error ke index.ts error handling
     }
   },
 
@@ -54,7 +54,7 @@ const userController = {
 
       res.json({
         message: "OK",
-        data: result,
+        content: result,
       });
     } catch (err) {
       next(err);
