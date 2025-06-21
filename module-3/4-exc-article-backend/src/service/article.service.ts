@@ -13,6 +13,12 @@ const articleService = {
       },
     });
   },
+
+  async findAll() {
+    return await this.db.article.findMany({
+      orderBy: { createdAt: "desc" },
+    });
+  },
 };
 
 export default articleService;
