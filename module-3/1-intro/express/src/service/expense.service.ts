@@ -2,6 +2,7 @@ import fs from "fs";
 import { IExpense } from "../interface/expense.interface";
 
 export function GetExpensesService(): IExpense[] {
+  // logika untuk ambil data dari db.json
   const data = fs.readFileSync("src/db.json", "utf-8");
   const parsedData = JSON.parse(data);
 

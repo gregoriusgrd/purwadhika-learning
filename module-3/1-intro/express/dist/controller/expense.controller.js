@@ -14,10 +14,11 @@ exports.GetExpenseDetailsController = GetExpenseDetailsController;
 exports.AddExpenseController = AddExpenseController;
 const expense_service_1 = require("../service/expense.service");
 const expense_service_2 = require("../service/expense.service");
+// tangani permintaan client
 function GetExpensesController(req, res, next) {
     return __awaiter(this, void 0, void 0, function* () {
         try {
-            const expenses = (0, expense_service_1.GetExpensesService)();
+            const expenses = (0, expense_service_1.GetExpensesService)(); // service untuk ambil data
             res.status(200).json({
                 status: "OK",
                 data: expenses,

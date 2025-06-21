@@ -7,6 +7,7 @@ exports.GetExpensesService = GetExpensesService;
 exports.AddExpenseService = AddExpenseService;
 const fs_1 = __importDefault(require("fs"));
 function GetExpensesService() {
+    // logika untuk ambil data dari db.json
     const data = fs_1.default.readFileSync("src/db.json", "utf-8");
     const parsedData = JSON.parse(data);
     return parsedData.expenses;

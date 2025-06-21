@@ -3,6 +3,7 @@ import { AddExpenseController, GetExpenseDetailsController, GetExpensesControlle
 
 const router = Router();
 
+// untuk menghubungkan url ke controller
 router.get("/", GetExpensesController);
 router.get("/:id", GetExpenseDetailsController)
 router.post("/", AddExpenseController)

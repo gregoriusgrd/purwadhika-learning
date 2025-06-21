@@ -3,13 +3,14 @@ import { GetExpensesService } from "../service/expense.service";
 import { IExpense } from "../interface/expense.interface";
 import { AddExpenseService } from "../service/expense.service";
 
+// tangani permintaan client
 export async function GetExpensesController(
   req: Request,
   res: Response,
   next: NextFunction
 ) {
-  try {
-    const expenses = GetExpensesService();
+  try {             
+    const expenses = GetExpensesService(); // service untuk ambil data
     res.status(200).json({
       status: "OK",
       data: expenses,
