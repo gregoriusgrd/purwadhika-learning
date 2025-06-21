@@ -2,38 +2,48 @@ import { PrismaClient } from "@prisma/client";
 import { error } from "console";
 import { register } from "module";
 
-const prisma = new PrismaClient();
+// const db = new PrismaClient();
 
 const userService = {
+  db: new PrismaClient(),
+
   async findByEmail(email: string) {
-    return await prisma.user.findUnique({
+    return await this.db.user.findUnique({
       where: { email },
     });
   },
 
   async register(email: string, password: string) {
-    const existingUser = await this.findByEmail(email);
+    try {
+      const existingUser = await this.findByEmail(email);
 
-    if (existingUser) {
-      throw new Error("Email sudah terdaftar");
+      if (existingUser) {
+        throw new Error("Email sudah terdaftar");
+      }
+
+      await this.db.user.create({
+        data: {
+          email,
+          password,
+        },
+      });
+    } catch (err) {
+      throw err;
     }
-
-    return await prisma.user.create({
-      data: {
-        email,
-        password,
-      },
-    });
   },
 
   async login(email: string, password: string) {
-    const user = await this.findByEmail(email);
-    if(!user || user.password !== password) {
-        throw new Error("Email atau password salah")
-    }
+    try {
+      const existingUser = await this.findByEmail(email);
+      if (!existingUser || existingUser.password !== password) {
+        throw new Error("Email atau password salah");
+      }
 
-    return user
-  }
+      return existingUser;
+    } catch (err) {
+      throw err;
+    }
+  },
 };
 
 export default userService;
