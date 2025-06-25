@@ -16,8 +16,8 @@ const emailer = async (options: IEmailer) => {
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
-        user: "duskycloud9@gmail.com",
-        pass: "qvbl ceqs ebsw dxci",
+        user: "gangsar.purwadhika@gmail.com",
+        pass: "inhs qmno ofdq ztym",
       },
       logger: true,
     });
@@ -32,7 +32,7 @@ const emailer = async (options: IEmailer) => {
     const html = compiledTemplate(replacements);
 
     const message = {
-      from: "Gregorius Geraldin <duskycloud9@gmail.com>",
+      from: "Gangsar Aryo <gangsar.purwadhika@gmail.com>",
       to,
       html,
       subject,

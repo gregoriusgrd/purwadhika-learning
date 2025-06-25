@@ -3,8 +3,9 @@ import cors from "cors";
 import { errorMiddleware } from "./middlewares/error.middleware";
 import AuthRoute from "./routes/auth.route";
 import UserRoute from "./routes/user.route";
+import UserImageRoute from "./routes/userImage.route";
 
-const PORT = 8000;
+const PORT = 8001;
 
 export default class App {
   private app: Express;
@@ -34,7 +35,7 @@ export default class App {
      * extended: true -> using qs instead of querystring to parse data, to allow parsing nested objects and arrays
     */
     this.app.use(urlencoded({ extended: true }));
-    this.app.use(express.static("public"))
+    this.app.use(express.static("public"));
   }
 
   private initializeRoutes(): void {
@@ -44,6 +45,7 @@ export default class App {
 
     this.app.use("/auth", new AuthRoute().router);
     this.app.use("/users", new UserRoute().router);
+    this.app.use("/user-images", new UserImageRoute().router);
   }
 
   private initializeErrorHandling() {
